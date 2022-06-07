@@ -1,7 +1,25 @@
 document.addEventListener("DOMContentLoaded", () => {
   // your code here
-  document.querySelector('form').addEventListener("submit",(e) => {
+  let form = document.querySelector('form')
+  form.addEventListener("submit",(e) => {
     e.preventDefault()
-    console.log(e.target.new-task-description.value)
+    handleToDo(e.target.new_task_description.value, e.target.Priority_Dropdown.value)
+  form.reset()
   })
   })
+
+  function handleToDo(toDo, priority){
+    let li = document.createElement("li")
+    let btn = document.createElement("button")
+
+    btn.textContent = "x"
+    btn.addEventListener('click',handleDelete)
+    li.textContent = `Priority level ${priority}: ${toDo} `
+    li.className = priority
+    li.appendChild(btn)
+    document.querySelector("#tasks").appendChild(li)
+  }
+
+  function handleDelete(e){
+    e.target.parentNode.remove()
+  }

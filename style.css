@@ -35,3 +35,30 @@ button {
   border-radius: 5px;
   box-shadow: 2px 5px 5px #333;
 }
+
+.High{
+  color: red;
+  font-weight: 900;
+}
+
+.Medium{
+  color: orange;
+  font-weight: 900;
+}
+
+.Low{
+  color: greenyellow;
+  font-weight: 900;
+}
+
+label{
+  display: inline-block;
+  width: 200px;
+  text-align: right;
+  padding: 0;
+}
+
+#submit_btn{
+  text-align: center;
+}
+
